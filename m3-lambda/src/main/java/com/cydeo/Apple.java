@@ -14,7 +14,7 @@ public class Apple {
 
     private Color appleColor;
 
-    private Double appleWeight;
+    private int appleWeight;
 
 
 }
