@@ -13,13 +13,13 @@ public class OrangeTest {
         inventory.add(new Orange(50, Color.RED));
 
         OrangeFormatter orangeLambda = orange -> "An orange of " + orange.getWeight() + "g";
-        prettyPrintApple(inventory, orangeLambda);
+        prettyPrintOrange(inventory, orangeLambda);
 
         //prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g");
 
     }
 
-    private static void prettyPrintApple(List<Orange> inventory, OrangeFormatter formatter) {
+    private static void prettyPrintOrange(List<Orange> inventory, OrangeFormatter formatter) {
         for (Orange orange : inventory) {
             String output = formatter.accept(orange);
             System.out.println(output);
