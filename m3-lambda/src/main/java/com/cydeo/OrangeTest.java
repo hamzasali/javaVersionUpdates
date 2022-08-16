@@ -17,6 +17,14 @@ public class OrangeTest {
 
         //prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g");
 
+        System.out.println("|======================================|");
+
+        OrangeFormatter orangeColor = orange -> {
+            String ch = orange.getWeight() > 200 ? "Heavy" : "Light";
+            return "A " + ch + " " + orange.getColor() + " orange";
+        };
+
+        prettyPrintOrange(inventory, orangeColor);
     }
 
     private static void prettyPrintOrange(List<Orange> inventory, OrangeFormatter formatter) {
