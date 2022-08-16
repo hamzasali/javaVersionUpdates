@@ -1,5 +1,6 @@
-package com.cydeo;
+package com.cydeo.task;
 
+import com.cydeo.Color;
 import lombok.*;
 
 
