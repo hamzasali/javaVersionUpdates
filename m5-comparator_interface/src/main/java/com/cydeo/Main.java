@@ -20,5 +20,15 @@ public class Main {
         System.out.println(list);
 
         Collections.sort(list, (o1, o2) -> (o1 > o2) ? -1 : (o2 > o1) ? 1 : 0);
+
+        //Ascending order
+        list.sort((o1, o2) -> o1.compareTo(o2));
+        System.out.println(list);
+
+        //descending order
+        list.sort((o1, o2) -> o2.compareTo(o1));
+        System.out.println(list);
+
+
     }
 }
