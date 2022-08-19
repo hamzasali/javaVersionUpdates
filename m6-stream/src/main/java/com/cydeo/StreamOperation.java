@@ -8,8 +8,7 @@ public class StreamOperation {
     public static void main(String[] args) {
 
         List<Integer> list = Arrays.asList(1, 2, 1, 3, 3, 2, 4);
-//        list.forEach(System.out::println);
-
+        System.out.println(list);
         //FILTER
         System.out.println("->->->->->-> Filter <-<-<-<-<-<-");
         list.stream()
@@ -37,5 +36,15 @@ public class StreamOperation {
                 .filter(i -> i % 2 == 0)
                 .skip(1)
                 .forEach(System.out::println);
+
+        //Map
+        System.out.println("->->->->->-> Map <-<-<-<-<-<-");
+        list.stream()
+                .map(number -> number * 2)
+                .filter(i -> i % 3 == 0)
+                .forEach(System.out::println);
+
+
+
     }
 }
