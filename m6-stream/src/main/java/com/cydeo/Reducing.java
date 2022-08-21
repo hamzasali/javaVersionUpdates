@@ -37,5 +37,9 @@ public class Reducing {
         System.out.println("min = " + min.get());
         System.out.println("max = " + max.get());
         System.out.println("sum = " + sum.get());
+
+        long dishCount = DishData.getAll().stream().count();
+        System.out.println(dishCount);
+
     }
 }
