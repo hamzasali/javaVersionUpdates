@@ -3,6 +3,7 @@ package com.cydeo;
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
+import java.util.*;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -41,6 +42,27 @@ public class FindingMatching {
         System.out.println(IntStream.range(0, 100).parallel().findAny());
         System.out.println(IntStream.range(0, 100).parallel().findFirst());
 
+        List<String> list1 = Arrays.asList("Jhonny", "David", "Jack", "Duke", "Jill", "Dany", "Julia", "Jenish", "Divya");
+        List<String> list2 = Arrays.asList("Jhonny", "David", "Jack", "Duke", "Jill", "Dany", "Julia", "Jenish", "Divya");
+
+//        Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst();
+//        Optional<String> findAny = list2.parallelStream().filter(s -> s.startsWith("J")).findAny();
+
+        Optional<String> findFirst = list1.stream().filter(s -> s.startsWith("D")).findFirst();
+        Optional<String> findAny = list2.stream().filter(s -> s.startsWith("J")).findAny();
+
+        System.out.println(findFirst.get());
+        System.out.println(findAny.get());
+
+        //MIN
+        System.out.println("->->->->->-> MIN <-<-<-<-<-<-");
+        Optional<Dish> min = DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+        System.out.println(min.get());
+
+        //MAX
+        System.out.println("->->->->->-> MAX <-<-<-<-<-<-");
+        Optional<Dish> max = DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+        System.out.println(max.get());
 
     }
 }
