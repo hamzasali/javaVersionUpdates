@@ -1,4 +1,4 @@
-package com.cydeo.Java11;
+package com.cydeo.java11;
 
 public class StringMethodDemo {
     public static void main(String[] args) {

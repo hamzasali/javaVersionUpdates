@@ -1,4 +1,4 @@
-package com.cydeo.Java11;
+package com.cydeo.java11;
 
 import java.util.Arrays;
 import java.util.List;
