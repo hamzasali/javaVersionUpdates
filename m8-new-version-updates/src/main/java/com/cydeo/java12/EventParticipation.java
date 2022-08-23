@@ -8,8 +8,7 @@ class EventParticipation {
     private List<String> guestNameList;
     private Integer totalNumberOfParticipants;
 
-    public EventParticipation(List<String> guestNameList,
-                              Integer totalNumberOfParticipants) {
+    public EventParticipation(List<String> guestNameList, Integer totalNumberOfParticipants) {
         this.guestNameList = guestNameList;
         this.totalNumberOfParticipants = totalNumberOfParticipants;
     }
